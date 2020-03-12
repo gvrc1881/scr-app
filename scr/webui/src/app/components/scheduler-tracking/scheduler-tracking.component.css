@@ -11,17 +11,12 @@ mat-cell:first-of-type, mat-footer-cell:first-of-type, mat-header-cell:first-of-
 
 .admin-scheduler-panel .panel-primary>.panel-heading{ 
     color: #fff;
-    background-color:#3693ad !important;
-    border-color: #3693ad !important;
+    background-color:#5dbae8  !important;
+    border-color: #5dbae8  !important;
 }
 .admin-scheduler-panel .mat-header-cell{
-    background: rgba(9,106,133,1) !important;
-    background: -moz-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(9,106,133,1)), color-stop(50%, rgba(117,189,209,1)), color-stop(100%, rgba(97,172,191,1))) !important;
-    background: -webkit-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
-    background: -o-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
-    background: -ms-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
-    background: linear-gradient(to bottom, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
+    background: #5dbae8  !important;
+    
     color: #000 !important;
 
 
