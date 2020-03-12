@@ -1,0 +1,30 @@
+.herader-breadcrumb{
+    margin-top: 4%;
+    text-align: right;
+}
+.disabled {
+    pointer-events:none;
+    opacity:0.6;        
+}
+.dropmenu_icon {
+    position: absolute;
+    right: 0;
+}
+.right-img img {
+    width: 71px;
+    margin-top: 0;
+    position: relative;
+    top: 7px;
+}
+.admin-view a {
+    background: rgba(9,106,133,1) !important;
+background: -moz-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(9,106,133,1)), color-stop(50%, rgba(117,189,209,1)), color-stop(100%, rgba(97,172,191,1))) !important;
+background: -webkit-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
+background: -o-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
+background: -ms-linear-gradient(top, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
+background: linear-gradient(to bottom, rgba(9,106,133,1) 0%, rgba(117,189,209,1) 50%, rgba(97,172,191,1) 100%) !important;
+}
+.admin-view .submenuul {
+    background: #f9f9f9;
+}
