@@ -1,0 +1,31 @@
+export class ReportModel{
+    outputData: any;
+    reportName: string;
+	zone: string;
+	reportHeader: string;
+    division: string;
+    permission:String;
+    depot:string;
+    facility:any;
+    reportId:any;
+    id:any;
+    productId : any;
+    fromDate:any;
+    toDate:any;
+    failureFromDate:any;
+    failureToDate:any;
+    department:any;
+    observationCategory:any;
+    reportCategory:any;
+    scheduleCode:any;
+    assetType:any;
+    assetId:any;
+    scheduleDate:any;
+    year:any;
+    switchType:any;
+    pbSwitchType:any;
+    pbExtentCode:any;
+    elementarySectionCode:any;
+    fromkm:any;
+    tokm:any;
+}
