@@ -167,8 +167,19 @@ const routes: Routes = [
     path: 'resetPassword',
     loadChildren: './components/forgot-password/forgot-password.module#ForgotPasswordModule',
     //canActivate: 'full'
+  },
+  {
+    path: 'drives',
+    loadChildren: './components/drives/drive/drive.module#DriveModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'drive-checklist',
+    loadChildren: './components/drives/drive-checklist/drive-checklist.module#DriveChecklistModule',
+    canActivate: [AuthGuard]
   }
 ];
+
 
 @NgModule({
   imports: [

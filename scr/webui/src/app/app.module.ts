@@ -68,7 +68,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme);
     MatTableModule,
     MatPaginatorModule,
     MatTabsModule,
-    SatPopoverModule
+    SatPopoverModule,
+    
   ],
   entryComponents: [
         FuseConfirmDialogComponent,

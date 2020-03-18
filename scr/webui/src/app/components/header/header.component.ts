@@ -2,7 +2,6 @@ import { Component, OnInit, OnChanges, DoCheck } from '@angular/core';
 import { Router, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
 import { CommonService } from 'src/app/common/common.service';
 import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
-import { DeprecatedDatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -260,6 +259,31 @@ export class HeaderComponent implements OnInit, DoCheck {
             subMenuIcon: "fa fa-file",
             rolePermission:true,
             currentSubMenu: !!path && path.includes("contentManagement") ? "active-item" : "",
+          }
+        ]
+      },
+      { 
+        ID: 8,
+        menuName: 'Drives', 
+        menuUrl: 'drives', 
+        icon: "fa fa-file",
+        color: "#12E1EE", 
+        isSelected: true, 
+        currentTab: !!path && path.includes("drives") || path.includes("drive-checklist") ? "open" : "",  
+        subMenus: [
+          {
+            subMenuName: "Drives",
+            subMenuURL: "drives",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drives") ? "active-item" : "",
+          },
+          {
+            subMenuName: "Drive Checklist",
+            subMenuURL: "drive-checklist",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drive-checklist") ? "active-item" : "",
           }
         ]
       }

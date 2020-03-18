@@ -20,7 +20,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="event_type")
+//@Table(name="event_type")
 @NamedQuery(name="EventType.findAll", query="SELECT et FROM EventType et")
 public class EventType {
 	@Id
