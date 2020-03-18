@@ -177,6 +177,36 @@ const routes: Routes = [
     path: 'drive-checklist',
     loadChildren: './components/drives/drive-checklist/drive-checklist.module#DriveChecklistModule',
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'drive-target',
+    loadChildren: './components/drives/drive-target/drive-target.module#DriveTargetModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'drive-progress-record',
+    loadChildren: './components/drives/drive-progress-record/drive-progress-record.module#DriveProgressRecordModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'drive-failure-analysis',
+    loadChildren: './components/drives/drive-failure-analysis/drive-failure-analysis.module#DriveFailureAnalysisModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'drive-electrification-targets',
+    loadChildren: './components/drives/drive-electrification-targets/drive-electrification-targets.module#DriveElectrificationTargetsModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'drive-inspection',
+    loadChildren: './components/drives/drive-inspection/drive-inspection.module#DriveInspectionModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'drive-stipulation',
+    loadChildren: './components/drives/drive-stipulation/drive-stipulation.module#DriveStipulationModule',
+    canActivate: [AuthGuard]
   }
 ];
 

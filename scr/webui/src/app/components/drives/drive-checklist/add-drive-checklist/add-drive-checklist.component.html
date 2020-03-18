@@ -33,37 +33,82 @@
 
                                                     <!-- DRIVE -->
                                                     <div class="col-md-3">
-                                                        <mat-form-field fxFlex="30">
-                                                            <input matInput placeholder="Drive" size="12" maxlength="12"
-                                                                [formControl]="addDriveFormGroup.controls['drive']"
-                                                                required>
+                                                        <mat-form-field fxFlex="30" class="example-full-width">
+                                                            <mat-select placeholder="Select Drive"
+                                                                [formControl]="addDriveChecklistFormGroup.controls['drive']">
+                                                                <mat-option *ngFor="let drive of driveList"
+                                                                    [value]="drive.id">
+                                                                    {{ drive.drive }}
+                                                                </mat-option>
+                                                            </mat-select>
                                                             <mat-error
-                                                                *ngIf="addDriveFormGroup.controls['drive'].hasError('required') && addDriveFormGroup.controls['drive'].touched"
-                                                                class="alert alert-danger">Enter Drive</mat-error>
-                                                            <mat-error
-                                                                *ngIf="addDriveFormGroup.controls['drive'].hasError('minlength') && addDriveFormGroup.controls['drive'].touched"
-                                                                class="alert alert-danger">Name minimum of 3
-                                                                charecters
-                                                            </mat-error>
-                                                            <mat-error
-                                                                *ngIf="addDriveFormGroup.controls['name'].hasError('pattern') && addDriveFormGroup.controls['name'].touched"
-                                                                class="alert alert-danger">Only alphabets allowed
-                                                            </mat-error>
+                                                                *ngIf="addDriveChecklistFormGroup.controls['drive'].hasError('required') && addDriveChecklistFormGroup.controls['drive'].touched"
+                                                                class="alert alert-danger">Select Drive</mat-error>
                                                         </mat-form-field>
                                                     </div>
 
                                                     <!-- measureActivityList -->
                                                     <div class="col-md-3">
+                                                        <mat-form-field fxFlex="30" class="example-full-width">
+                                                            <mat-select placeholder="Select Measure Activity List"
+                                                                [formControl]="addDriveChecklistFormGroup.controls['measureActivityList']">
+                                                                <mat-option *ngFor="let measureActivity of measureActivityList"
+                                                                    [value]="measureActivity.id">
+                                                                    {{ measureActivity.measureActivityList }}
+                                                                </mat-option>
+                                                            </mat-select>
+                                                            <mat-error
+                                                                *ngIf="addDriveChecklistFormGroup.controls['measureActivityList'].hasError('required') && addDriveChecklistFormGroup.controls['measureActivityList'].touched"
+                                                                class="alert alert-danger">Select Measure Activity List</mat-error>
+                                                        </mat-form-field>
+                                                    </div>
+
+                                                    <!-- DISPLAY ORDER -->
+                                                    <div class="col-md-3">
                                                         <mat-form-field fxFlex="30">
-                                                            <input matInput placeholder="Measure Activity List" size="12"
+                                                            <input matInput placeholder="Display Order" size="12"
                                                                 maxlength="12"
-                                                                [formControl]="addDriveFormGroup.controls['measureActivityList']"
+                                                                [formControl]="addDriveChecklistFormGroup.controls['displayOrder']"
                                                                 required>
                                                             <mat-error
-                                                                *ngIf="addDriveFormGroup.controls['measureActivityList'].hasError('required') && addDriveFormGroup.controls['measureActivityList'].touched"
-                                                                class="alert alert-danger">Enter Measure Activity List</mat-error>
+                                                                *ngIf="addDriveChecklistFormGroup.controls['displayOrder'].hasError('required') && addDriveChecklistFormGroup.controls['displayOrder'].touched"
+                                                                class="alert alert-danger">Enter Display Order</mat-error>
                                                             <mat-error
-                                                                *ngIf="addDriveFormGroup.controls['measureActivityList'].hasError('pattern') && addDriveFormGroup.controls['measureActivityList'].touched"
+                                                                *ngIf="addDriveChecklistFormGroup.controls['displayOrder'].hasError('pattern') && addDriveChecklistFormGroup.controls['displayOrder'].touched"
+                                                                class="alert alert-danger">Only alphabets allowed
+                                                            </mat-error>
+                                                        </mat-form-field>
+                                                    </div>
+
+                                                    <!-- UPPER LIMIT -->
+                                                    <div class="col-md-3">
+                                                        <mat-form-field fxFlex="30">
+                                                            <input matInput placeholder="Upper Limit" size="12"
+                                                                maxlength="12"
+                                                                [formControl]="addDriveChecklistFormGroup.controls['upperLimit']"
+                                                                required>
+                                                            <mat-error
+                                                                *ngIf="addDriveChecklistFormGroup.controls['upperLimit'].hasError('required') && addDriveChecklistFormGroup.controls['upperLimit'].touched"
+                                                                class="alert alert-danger">Enter Upper Limit</mat-error>
+                                                            <mat-error
+                                                                *ngIf="addDriveChecklistFormGroup.controls['upperLimit'].hasError('pattern') && addDriveChecklistFormGroup.controls['upperLimit'].touched"
+                                                                class="alert alert-danger">Only alphabets allowed
+                                                            </mat-error>
+                                                        </mat-form-field>
+                                                    </div>
+
+                                                    <!-- LOWER LIMIT -->
+                                                    <div class="col-md-3">
+                                                        <mat-form-field fxFlex="30">
+                                                            <input matInput placeholder="Lower Limit" size="12"
+                                                                maxlength="12"
+                                                                [formControl]="addDriveChecklistFormGroup.controls['lowerLimit']"
+                                                                required>
+                                                            <mat-error
+                                                                *ngIf="addDriveChecklistFormGroup.controls['lowerLimit'].hasError('required') && addDriveChecklistFormGroup.controls['lowerLimit'].touched"
+                                                                class="alert alert-danger">Enter Lower Limit</mat-error>
+                                                            <mat-error
+                                                                *ngIf="addDriveChecklistFormGroup.controls['lowerLimit'].hasError('pattern') && addDriveChecklistFormGroup.controls['lowerLimit'].touched"
                                                                 class="alert alert-danger">Only alphabets allowed
                                                             </mat-error>
                                                         </mat-form-field>
@@ -74,14 +119,14 @@
                                                     <div class="col-md-3">
                                                         <mat-form-field fxFlex="30">
                                                             <mat-select placeholder="Status"
-                                                                [formControl]="addDriveFormGroup.controls['status']">
+                                                                [formControl]="addDriveChecklistFormGroup.controls['status']">
                                                                 <mat-option *ngFor="let status of statusList"
                                                                     [value]="status.id">
                                                                     {{ status.status}}
                                                                 </mat-option>
                                                             </mat-select>
                                                             <mat-error
-                                                                *ngIf="addDriveFormGroup.controls['status'].hasError('required') && addDriveFormGroup.controls['status'].touched"
+                                                                *ngIf="addDriveChecklistFormGroup.controls['status'].hasError('required') && addDriveChecklistFormGroup.controls['status'].touched"
                                                                 class="alert alert-danger">Select Status</mat-error>
                                                         </mat-form-field>
                                                     </div>
@@ -93,11 +138,11 @@
                                                     <div class="float-right" style="float: right;">
                                                         <button class="mat-raised-button mat-accent" color="accent"
                                                             class="d-inline" mat-raised-button="" type="submit"
-                                                            [disabled]="addDriveFormGroup.invalid" *ngIf="saveUser">
+                                                            [disabled]="addDriveChecklistFormGroup.invalid" *ngIf="saveUser">
                                                             Submit
                                                         </button>
                                                         <button class="mat-raised-button mat-accent  d-inline"
-                                                            [disabled]="addDriveFormGroup.invalid" color="accent"
+                                                            [disabled]="addDriveChecklistFormGroup.invalid" color="accent"
                                                             mat-raised-button="" *ngIf="updateUser">
                                                             Update
                                                         </button>&nbsp;&nbsp;

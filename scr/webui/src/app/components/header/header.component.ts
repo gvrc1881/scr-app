@@ -1,7 +1,6 @@
-import { Component, OnInit, OnChanges, DoCheck } from '@angular/core';
-import { Router, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
+import { Component, OnInit,  DoCheck } from '@angular/core';
+import { Router} from '@angular/router';
 import { CommonService } from 'src/app/common/common.service';
-import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +18,6 @@ export class HeaderComponent implements OnInit, DoCheck {
   loggedUser: any;
   rolePermission: boolean = true;
   constructor(
-    private route: Router,
     private commonService: CommonService) {
 
   }
@@ -269,7 +267,10 @@ export class HeaderComponent implements OnInit, DoCheck {
         icon: "fa fa-file",
         color: "#12E1EE", 
         isSelected: true, 
-        currentTab: !!path && path.includes("drives") || path.includes("drive-checklist") ? "open" : "",  
+        currentTab: !!path && path.includes("drives") || path.includes("drive-checklist") ||
+        path.includes("drive-target") || path.includes("drive-progress-record") || 
+        path.includes("drive-failure-analysis") || path.includes("drive-electrification-targets") ||
+        path.includes("drive-inspection") || path.includes("drive-stipulation")  ? "open" : "",  
         subMenus: [
           {
             subMenuName: "Drives",
@@ -284,6 +285,48 @@ export class HeaderComponent implements OnInit, DoCheck {
             subMenuIcon: "fa fa-file",
             rolePermission:true,
             currentSubMenu: !!path && path.includes("drive-checklist") ? "active-item" : "",
+          },
+          {
+            subMenuName: "Drive Target",
+            subMenuURL: "drive-target",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drive-target") ? "active-item" : "",
+          },
+          {
+            subMenuName: "Drive Progress Record",
+            subMenuURL: "drive-progress-record",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drive-progress-record") ? "active-item" : "",
+          },
+          {
+            subMenuName: "Drive Failure Analysis",
+            subMenuURL: "drive-failure-analysis",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drive-failure-analysis") ? "active-item" : "",
+          },
+          {
+            subMenuName: "Drive Electrification Targets",
+            subMenuURL: "drive-electrification-targets",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drive-electrification-targets") ? "active-item" : "",
+          },
+          {
+            subMenuName: "Drive Inspection",
+            subMenuURL: "drive-inspection",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drive-inspection") ? "active-item" : "",
+          },
+          {
+            subMenuName: "Drive Stipulation",
+            subMenuURL: "drive-stipulation",
+            subMenuIcon: "fa fa-file",
+            rolePermission:true,
+            currentSubMenu: !!path && path.includes("drive-stipulation") ? "active-item" : "",
           }
         ]
       }

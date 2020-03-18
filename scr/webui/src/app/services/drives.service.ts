@@ -22,6 +22,6 @@ export class DrivesService {
     }
 
     getDrivesCheckListData() {
-        return this.http.get<DriveModel[]>(environment.apiUrl + '/drives-checklist', { headers: this.header });            
+        return this.http.get<DriveModel[]>(environment.apiUrl + '/checklist', { headers: this.header });            
     }
 }
